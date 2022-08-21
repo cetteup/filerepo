@@ -1,6 +1,6 @@
 //go:build unit
 
-package file_repository
+package filerepo
 
 import (
 	"os"

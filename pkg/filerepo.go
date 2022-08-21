@@ -1,4 +1,4 @@
-package file_repository
+package filerepo
 
 import (
 	"errors"
