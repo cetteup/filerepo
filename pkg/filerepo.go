@@ -51,7 +51,7 @@ func (r *FileRepository) ReadFile(path string) ([]byte, error) {
 	return os.ReadFile(path)
 }
 
-func (r FileRepository) WriteFile(path string, data []byte, perm os.FileMode) error {
+func (r *FileRepository) WriteFile(path string, data []byte, perm os.FileMode) error {
 	return os.WriteFile(path, data, perm)
 }
 
