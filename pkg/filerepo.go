@@ -3,6 +3,7 @@ package filerepo
 import (
 	"errors"
 	"os"
+	"path/filepath"
 )
 
 type pathType int
@@ -57,4 +58,12 @@ func (r *FileRepository) WriteFile(path string, data []byte, perm os.FileMode) e
 
 func (r *FileRepository) ReadDir(path string) ([]os.DirEntry, error) {
 	return os.ReadDir(path)
+}
+
+func (r *FileRepository) Glob(pattern string) ([]string, error) {
+	return filepath.Glob(pattern)
+}
+
+func (r *FileRepository) RemoveAll(path string) error {
+	return os.RemoveAll(path)
 }
