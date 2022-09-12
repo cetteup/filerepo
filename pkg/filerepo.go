@@ -60,10 +60,10 @@ func (r *FileRepository) ReadDir(path string) ([]os.DirEntry, error) {
 	return os.ReadDir(path)
 }
 
-func (r *FileRepository) Glob(pattern string) ([]string, error) {
-	return filepath.Glob(pattern)
-}
-
 func (r *FileRepository) RemoveAll(path string) error {
 	return os.RemoveAll(path)
+}
+
+func (r *FileRepository) Glob(pattern string) ([]string, error) {
+	return filepath.Glob(pattern)
 }
