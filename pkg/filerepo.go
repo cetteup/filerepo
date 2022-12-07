@@ -67,3 +67,7 @@ func (r *FileRepository) RemoveAll(path string) error {
 func (r *FileRepository) Glob(pattern string) ([]string, error) {
 	return filepath.Glob(pattern)
 }
+
+func (r *FileRepository) Rename(oldpath string, newpath string) error {
+	return os.Rename(oldpath, newpath)
+}
